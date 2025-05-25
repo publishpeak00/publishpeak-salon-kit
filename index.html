@@ -12,7 +12,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* (same CSS content unchanged) */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1c1c1c;
+      color: #f5f2ef;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, h3 {
+      color: #bda38a;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff6b9a, #bda38a);
+      color: #1c1c1c;
+      padding: 1rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      transition: transform 0.25s, box-shadow 0.25s;
+      text-align: center;
+    }
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+    }
   </style>
 </head>
 <body>
@@ -66,7 +92,7 @@
     <div class="container" data-fx>
       <h2>🎁 Try It Free — And Compete On Your Terms</h2>
       <p>Start with the 7‑day Mini Makeover — it’s free. Copy, paste, and see what happens when you stop chasing virality and start building local loyalty.</p>
-      <a href="https://payhip.com/b/7ckbr" class="btn">Grab My Free Makeover</a>
+      <a href="https://payhip.com/b/7ckbr" class="btn" target="_blank">Grab My Free Makeover</a>
     </div>
   </section>
 
@@ -77,12 +103,16 @@
 
   <!-- ========== SCROLL FX SCRIPT ========== -->
   <script>
-    const appearEls=document.querySelectorAll('[data-fx]');
-    const io=new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target);} });
-    },{threshold:.2});
-    appearEls.forEach(el=>io.observe(el));
+    const appearEls = document.querySelectorAll('[data-fx]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    appearEls.forEach(el => io.observe(el));
   </script>
 </body>
 </html>
