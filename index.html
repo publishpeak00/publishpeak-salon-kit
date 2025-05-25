@@ -25,6 +25,11 @@
     h1, h2, h3 {
       color: #bda38a;
     }
+    .container {
+      width: 92%;
+      max-width: 1200px;
+      margin-inline: auto;
+    }
     .btn {
       display: inline-block;
       background: linear-gradient(135deg, #ff6b9a, #bda38a);
@@ -39,12 +44,65 @@
       transform: translateY(-4px);
       box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
     }
+    header#hero {
+      background: url("https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6832205eb49f19490c866f23.png") center/cover no-repeat;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    header#hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(28, 28, 28, 0.55);
+    }
+    header#hero .inner {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: #272727;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .card img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    .card .text {
+      padding: 1.5rem;
+    }
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background: #181818;
+      font-size: 0.85rem;
+    }
+    .testi {
+      max-width: 700px;
+      margin: auto;
+      font-style: italic;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <!-- ========== HERO ========== -->
   <header id="hero">
-    <div class="inner" data-fx>
+    <div class="inner">
       <h1>💫 The AI Marketing Boost Kit</h1>
       <h2>“Good work isn’t enough anymore. Stylists need a better way to stand out.”</h2>
       <p>A personalized AI marketing system — built for solo stylists, suite owners, and home‑based pros.</p>
@@ -53,66 +111,62 @@
   </header>
 
   <!-- ========== EDGE SECTION ========== -->
-  <section id="edge">
-    <div class="container" data-fx>
-      <h2>🎯 Competing with Big Salons and Stylists Who Go Viral? Here's Your Edge.</h2>
-      <p>The ones getting all the attention aren’t always the most talented — they’re the most <em>visible</em>. Booked‑out creators, big salons with ad budgets, stylists who pop on every feed.</p>
-      <p>And here you are — doing incredible work but still chasing rebookings, reviews, and local buzz.</p>
-      <p>You don’t need to post more. You need a plan that works like you do — quietly, consistently, and built around your business. That’s where the AI Marketing Boost Kit comes in.</p>
-    </div>
+  <section id="edge" class="container">
+    <h2>🎯 Competing with Big Salons and Stylists Who Go Viral? Here's Your Edge.</h2>
+    <p>The ones getting all the attention aren’t always the most talented — they’re the most <em>visible</em>. Booked‑out creators, big salons with ad budgets, stylists who pop on every feed.</p>
+    <p>And here you are — doing incredible work but still chasing rebookings, reviews, and local buzz.</p>
+    <p>You don’t need to post more. You need a plan that works like you do — quietly, consistently, and built around your business. That’s where the AI Marketing Boost Kit comes in.</p>
   </section>
 
   <!-- ========== FEATURES ========== -->
-  <section id="features">
-    <div class="container" data-fx>
-      <h2>💼 What You’ll Get — All Built Around Your Chair</h2>
-      <div class="features-grid">
-        <!-- Cards (unchanged) -->
+  <section id="features" class="container">
+    <h2>💼 What You’ll Get — All Built Around Your Chair</h2>
+    <div class="features-grid">
+      <div class="card">
+        <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/68322f39b49f1973d086c81f.png" alt="Review messages">
+        <div class="text">
+          <h3>Review Messages in Your Voice</h3>
+          <p>Because scripts sound canned and clients can tell.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/683235910eaa6ed2ca4e5cb9.png" alt="Rebooking flows">
+        <div class="text">
+          <h3>Rebooking Flows That Fit Real Habits</h3>
+          <p>Follow-up timing mirrors how your clients actually schedule.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/682f86e7f5621f79580d41c5.png" alt="Copy dashboard">
+        <div class="text">
+          <h3>AI-Written Copy for Packages</h3>
+          <p>Sell services, products, and promos without staring at a blank page.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ========== DIFFERENCE ========== -->
-  <section id="difference">
-    <div class="container" data-fx>
-      <h2>🧠 The Difference? It's You — Backed by a Smarter System.</h2>
-      <p>Stylists love it because it feels like them — just with less guesswork and more growth.</p>
-    </div>
+  <section id="difference" class="container">
+    <h2>🧠 The Difference? It's You — Backed by a Smarter System.</h2>
+    <p>Stylists love it because it feels like them — just with less guesswork and more growth.</p>
   </section>
 
   <!-- ========== TESTIMONIALS ========== -->
-  <section id="testimonials">
-    <div class="container" data-fx>
-      <p class="testi">“Got two new bookings by Day 2.”<br>“Never knew I could make money from retail — until now.”<br>“This finally made sense for me.”</p>
-    </div>
+  <section id="testimonials" class="container">
+    <p class="testi">“Got two new bookings by Day 2.”<br>“Never knew I could make money from retail — until now.”<br>“This finally made sense for me.”</p>
   </section>
 
   <!-- ========== CTA ========== -->
-  <section id="cta">
-    <div class="container" data-fx>
-      <h2>🎁 Try It Free — And Compete On Your Terms</h2>
-      <p>Start with the 7‑day Mini Makeover — it’s free. Copy, paste, and see what happens when you stop chasing virality and start building local loyalty.</p>
-      <a href="https://payhip.com/b/7ckbr" class="btn" target="_blank">Grab My Free Makeover</a>
-    </div>
+  <section id="cta" class="container">
+    <h2>🎁 Try It Free — And Compete On Your Terms</h2>
+    <p>Start with the 7‑day Mini Makeover — it’s free. Copy, paste, and see what happens when you stop chasing virality and start building local loyalty.</p>
+    <a href="https://payhip.com/b/7ckbr" class="btn" target="_blank">Grab My Free Makeover</a>
   </section>
 
   <!-- ========== FOOTER ========== -->
   <footer>
     <p>&copy; 2025 AI Marketing Boost Kit · Inspired by HTML5 UP</p>
   </footer>
-
-  <!-- ========== SCROLL FX SCRIPT ========== -->
-  <script>
-    const appearEls = document.querySelectorAll('[data-fx]');
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    appearEls.forEach(el => io.observe(el));
-  </script>
 </body>
 </html>
