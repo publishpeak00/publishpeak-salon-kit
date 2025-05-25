@@ -4,152 +4,94 @@
   <meta charset="utf-8" />
   <title>AI Marketing Boost Kit – Mini Makeover</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Seven‑day AI marketing system that helps independent stylists drive re‑bookings, reviews and retail sales." />
+  <meta name="description" content="Seven-day AI marketing system that helps independent stylists drive re-bookings, reviews and retail sales." />
+  <!-- OG Meta -->
+  <meta property="og:title" content="Free 7‑Day AI Marketing Mini‑Makeover for Stylists" />
+  <meta property="og:description" content="Stand out locally, fill gaps and earn more without posting daily." />
+  <meta property="og:image" content="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6832205eb49f19490c866f23.png" />
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #1c1c1c;
-      color: #f5f2ef;
-      margin: 0;
-      padding: 0;
-    }
-    h1, h2, h3 {
-      color: #bda38a;
-    }
-    .container {
-      width: 92%;
-      max-width: 1200px;
-      margin-inline: auto;
-    }
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #ff6b9a, #bda38a);
-      color: #1c1c1c;
-      padding: 1rem 1.8rem;
-      border-radius: 40px;
-      font-weight: 600;
-      transition: transform 0.25s, box-shadow 0.25s;
-      text-align: center;
-    }
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
-    }
-    header#hero {
-      background: url("https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6832205eb49f19490c866f23.png") center/cover no-repeat;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
-    }
-    header#hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(28, 28, 28, 0.55);
-    }
-    header#hero .inner {
-      position: relative;
-      z-index: 1;
-      padding: 2rem;
-    }
-    .features-list {
-      margin-top: 3rem;
-    }
-    .features-list ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .features-list li {
-      margin-bottom: 1.5rem;
-      padding-left: 1.5em;
-      position: relative;
-    }
-    .features-list li::before {
-      content: '✅';
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-    footer {
-      padding: 2rem;
-      text-align: center;
-      background: #181818;
-      font-size: 0.85rem;
-    }
-    .testi {
-      max-width: 700px;
-      margin: auto;
-      font-style: italic;
-      text-align: center;
-    }
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#1c1c1c;color:#f5f9f8;font-family:'Poppins',sans-serif}
+    h1,h2,h3{color:#bda38a;margin:0}
+    .container{width:92%;max-width:1200px;margin-inline:auto}
+
+    /* Buttons */
+    .btn{display:inline-block;border:none;border-radius:40px;padding:1rem 1.8rem;font-weight:600;background:linear-gradient(135deg,#ff6b9a,#bda38a);color:#1c1c1c;cursor:pointer;transition:.25s}
+    .btn:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.4)}
+
+    /* Hero */
+    #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url("https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6832205eb49f19490c866f23.png") center/cover no-repeat;position:relative}
+    #hero::after{content:"";position:absolute;inset:0;background:rgba(28,28,28,.55)}
+    #hero .inner{position:relative;z-index:1;padding:2rem}
+
+    /* Cards */
+    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem;counter-reset:card}
+    .card{background:#272727;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+    .card::before{counter-increment:card;content:counter(card);position:absolute;top:10px;left:10px;background:#ff6b9a;color:#1c1c1c;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+    .card .text{padding:1.5rem}
+
+    /* Benefit list */
+    .benefits-list{display:grid;gap:1.5rem;margin-top:3rem}
+    .benefit-item{background:#272727;border-radius:12px;display:flex;gap:1rem;align-items:flex-start;padding:1.25rem 1.5rem;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+    .benefit-item span{font-size:1.75rem;line-height:1;color:#ff6b9a}
+    .benefit-item h3{margin:0 0 .35rem 0;font-size:1.1rem;color:#f5f9f8}
+    .benefit-item p{margin:0;font-size:.95rem;color:#dcdcdc}
+
+    /* Testimonials & footer */
+    .testi{max-width:700px;margin:auto;font-style:italic;text-align:center}
+    footer{padding:2rem;text-align:center;background:#181818;font-size:.85rem}
   </style>
 </head>
 <body>
-  <!-- ========== HERO ========== -->
+  <!-- HERO -->
   <header id="hero">
     <div class="inner">
       <h1>💫 The AI Marketing Boost Kit</h1>
-      <h2>“Good work isn’t enough anymore. Stylists need a better way to stand out.”</h2>
-      <p>A personalized AI marketing system — built for solo stylists, suite owners, and home‑based pros.</p>
-      <a href="#cta" class="btn">Learn More</a>
+      <h2>FREE 7‑Day AI Mini‑Makeover for Solo Stylists</h2>
+      <p>A personalized marketing system that works quietly in your background.</p>
+      <a href="#cta" class="btn">Start My Free Makeover</a>
     </div>
   </header>
 
-  <!-- ========== EDGE SECTION ========== -->
-  <section id="edge" class="container">
-    <h2>🎯 Competing with Big Salons and Stylists Who Go Viral? Here's Your Edge.</h2>
-    <p>The ones getting all the attention aren’t always the most talented — they’re the most <em>visible</em>. Booked‑out creators, big salons with ad budgets, stylists who pop on every feed.</p>
-    <p>And here you are — doing incredible work but still chasing rebookings, reviews, and local buzz.</p>
-    <p>You don’t need to post more. You need a plan that works like you do — quietly, consistently, and built around your business. That’s where the AI Marketing Boost Kit comes in.</p>
+  <!-- EDGE -->
+  <section class="container">
+    <h2>🎯 Why visibility, not virality, wins.</h2>
+    <p>You don’t need more posts — you need a system that re‑books, reviews and sells while you’re behind the chair. That’s exactly what the Boost Kit delivers.</p>
   </section>
 
-  <!-- ========== FEATURES ========== -->
-  <section id="features" class="container features-list">
-    <h2>💼 What You’ll Get — All Built Around Your Chair</h2>
-    <ul>
-      <li><strong>Upgrade your visibility in crowded local searches</strong><br>You’ll stand out on Google, IG, and marketplace platforms where new clients actually look — without changing your vibe or voice.</li>
-      <li><strong>Get more 5-star reviews — and rank higher everywhere</strong><br>Reviews build trust, boost your placement on booking apps, and make people pick you before they even compare. We'll write the follow-up text. You just send it.</li>
-      <li><strong>Rebook faster, with way less back-and-forth</strong><br>Automated messages match how your clients schedule — so you’re not stuck chasing confirmations or filling last-minute gaps.</li>
-      <li><strong>Sell more services + retail without being salesy</strong><br>AI-crafted blurbs (that sound like you) make your offers easy to understand — and easy to say yes to.</li>
-      <li><strong>Level up your marketplace page — where real people are looking</strong><br>From GlossGenius to Vagaro, StyleSeat and Booksy — we’ll give you preview-ready copy you can paste today.</li>
-      <li><strong>Collaborate locally — and actually grow from it</strong><br>Get plug-and-play outreach messages to connect with makeup artists, photographers, and local brands — because referrals &gt; reels.</li>
-      <li><strong>A real 30-day visibility plan built around your schedule</strong><br>Not generic content prompts. A timeline synced to your actual booking flow, slow weeks and all.</li>
-    </ul>
+  <!-- FEATURES CARDS -->
+  <section class="container">
+    <h2>💼 What You’ll Get</h2>
+    <div class="features-grid">
+      <div class="card"><img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/68322f39b49f1973d086c81f.png" alt="Visibility"><div class="text"><h3>Upgrade visibility in local search</h3><p>Stand out on Google, IG & booking apps without changing your vibe.</p></div></div>
+      <div class="card"><img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/683235910eaa6ed2ca4e5cb9.png" alt="Reviews"><div class="text"><h3>Get more 5‑star reviews</h3><p>Done‑for‑you follow‑ups boost ranking & trust. You just tap send.</p></div></div>
+      <div class="card"><img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/682f86e7f5621f79580d41c5.png" alt="Rebook"><div class="text"><h3>Rebook faster, with less back‑and‑forth</h3><p>Smart texts fire at the exact moment clients normally book again.</p></div></div>
+    </div>
+
+    <!-- TEXT BENEFITS -->
+    <div class="benefits-list">
+      <div class="benefit-item"><span>💡</span><div><h3>Sell more services + retail without being salesy</h3><p>AI‑crafted blurbs (that sound like you) make offers easy to understand — and easier to buy.</p></div></div>
+      <div class="benefit-item"><span>📈</span><div><h3>Level up your marketplace page</h3><p>GlossGenius, Vagaro, StyleSeat, Booksy — paste our optimized copy & convert browsers into bookings.</p></div></div>
+      <div class="benefit-item"><span>🤝</span><div><h3>Collaborate locally — and actually grow</h3><p>Plug‑and‑play outreach messages land collabs with makeup artists, photographers & local brands — because referrals &gt; reels.</p></div></div>
+      <div class="benefit-item"><span>🗓️</span><div><h3>A real 30‑day visibility plan built around you</h3><p>No generic prompts. A calendar tuned to your booking flow, slow weeks and all.</p></div></div>
+    </div>
   </section>
 
-  <!-- ========== DIFFERENCE ========== -->
-  <section id="difference" class="container">
-    <h2>🧠 The Difference? It's You — Backed by a Smarter System.</h2>
-    <p>Stylists love it because it feels like them — just with less guesswork and more growth.</p>
+  <!-- CTA -->
+  <section id="cta" class="container" style="text-align:center;margin:4rem auto;">
+    <h2>🎁 Try the Boost Kit Free</h2>
+    <p>Copy, paste and see what happens when marketing finally moves at stylist speed.</p>
+    <a href="https://payhip.com/b/7ckbr" target="_blank" class="btn">Grab My Free Mini‑Makeover</a>
   </section>
 
-  <!-- ========== TESTIMONIALS ========== -->
-  <section id="testimonials" class="container">
-    <p class="testi">“Got two new bookings by Day 2.”<br>“Never knew I could make money from retail — until now.”<br>“This finally made sense for me.”</p>
-  </section>
-
-  <!-- ========== CTA ========== -->
-  <section id="cta" class="container">
-    <h2>🎁 Try It Free — And Compete On Your Terms</h2>
-    <p>Start with the 7‑day Mini Makeover — it’s free. Copy, paste, and see what happens when you stop chasing virality and start building local loyalty.</p>
-    <a href="https://payhip.com/b/7ckbr" class="btn" target="_blank">Grab My Free Makeover</a>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer>
-    <p>&copy; 2025 AI Marketing Boost Kit · Inspired by HTML5 UP</p>
-  </footer>
+  <!-- Testimonials & Footer -->
+  <section class="container"><p class="testi">“I stopped guessing and filled two slow days in the first week.” — Suite Owner, Austin</p></section>
+  <footer><p>&copy; 2025 AI Marketing Boost Kit · Inspired by HTML5 UP</p></footer>
 </body>
 </html>
