@@ -64,26 +64,23 @@
       z-index: 1;
       padding: 2rem;
     }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    .features-list {
+      margin-top: 3rem;
     }
-    .card {
-      background: #272727;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    .features-list ul {
+      list-style: none;
+      padding-left: 0;
     }
-    .card img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
+    .features-list li {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5em;
+      position: relative;
     }
-    .card .text {
-      padding: 1.5rem;
+    .features-list li::before {
+      content: '✅';
+      position: absolute;
+      left: 0;
+      top: 0;
     }
     footer {
       padding: 2rem;
@@ -119,31 +116,17 @@
   </section>
 
   <!-- ========== FEATURES ========== -->
-  <section id="features" class="container">
+  <section id="features" class="container features-list">
     <h2>💼 What You’ll Get — All Built Around Your Chair</h2>
-    <div class="features-grid">
-      <div class="card">
-        <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/68322f39b49f1973d086c81f.png" alt="Review messages">
-        <div class="text">
-          <h3>Review Messages in Your Voice</h3>
-          <p>Because scripts sound canned and clients can tell.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/683235910eaa6ed2ca4e5cb9.png" alt="Rebooking flows">
-        <div class="text">
-          <h3>Rebooking Flows That Fit Real Habits</h3>
-          <p>Follow-up timing mirrors how your clients actually schedule.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/682f86e7f5621f79580d41c5.png" alt="Copy dashboard">
-        <div class="text">
-          <h3>AI-Written Copy for Packages</h3>
-          <p>Sell services, products, and promos without staring at a blank page.</p>
-        </div>
-      </div>
-    </div>
+    <ul>
+      <li><strong>Upgrade your visibility in crowded local searches</strong><br>You’ll stand out on Google, IG, and marketplace platforms where new clients actually look — without changing your vibe or voice.</li>
+      <li><strong>Get more 5-star reviews — and rank higher everywhere</strong><br>Reviews build trust, boost your placement on booking apps, and make people pick you before they even compare. We'll write the follow-up text. You just send it.</li>
+      <li><strong>Rebook faster, with way less back-and-forth</strong><br>Automated messages match how your clients schedule — so you’re not stuck chasing confirmations or filling last-minute gaps.</li>
+      <li><strong>Sell more services + retail without being salesy</strong><br>AI-crafted blurbs (that sound like you) make your offers easy to understand — and easy to say yes to.</li>
+      <li><strong>Level up your marketplace page — where real people are looking</strong><br>From GlossGenius to Vagaro, StyleSeat and Booksy — we’ll give you preview-ready copy you can paste today.</li>
+      <li><strong>Collaborate locally — and actually grow from it</strong><br>Get plug-and-play outreach messages to connect with makeup artists, photographers, and local brands — because referrals &gt; reels.</li>
+      <li><strong>A real 30-day visibility plan built around your schedule</strong><br>Not generic content prompts. A timeline synced to your actual booking flow, slow weeks and all.</li>
+    </ul>
   </section>
 
   <!-- ========== DIFFERENCE ========== -->
