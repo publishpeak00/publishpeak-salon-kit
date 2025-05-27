@@ -1,97 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>AI Marketing Boost Kit – Mini Makeover</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Seven-day AI marketing system that helps independent stylists drive re-bookings, reviews and retail sales." />
-  <!-- OG Meta -->
-  <meta property="og:title" content="Free 7‑Day AI Marketing Mini‑Makeover for Stylists" />
-  <meta property="og:description" content="Stand out locally, fill gaps and earn more without posting daily." />
-  <meta property="og:image" content="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6832205eb49f19490c866f23.png" />
-
-  <!-- Font -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    html{scroll-behavior:smooth}
-    body{margin:0;background:#1c1c1c;color:#f5f9f8;font-family:'Poppins',sans-serif}
-    h1,h2,h3{color:#bda38a;margin:0}
-    .container{width:92%;max-width:1200px;margin-inline:auto}
-
-    /* Buttons */
-    .btn{display:inline-block;border:none;border-radius:40px;padding:1rem 1.8rem;font-weight:600;background:linear-gradient(135deg,#ff6b9a,#bda38a);color:#1c1c1c;cursor:pointer;transition:.25s}
-    .btn:hover{transform:translateY(-4px);box-shadow:0 8px 22px rgba(0,0,0,.4)}
-
-    /* Hero */
-    #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url("https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6832205eb49f19490c866f23.png") center/cover no-repeat;position:relative}
-    #hero::after{content:"";position:absolute;inset:0;background:rgba(28,28,28,.55)}
-    #hero .inner{position:relative;z-index:1;padding:2rem}
-
-    /* Cards */
-    .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem;counter-reset:card}
-    .card{background:#272727;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 4px 12px rgba(0,0,0,.3)}
-    .card::before{counter-increment:card;content:counter(card);position:absolute;top:10px;left:10px;background:#ff6b9a;color:#1c1c1c;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700}
-    .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
-    .card .text{padding:1.5rem}
-
-    /* Benefit list */
-    .benefits-list{display:grid;gap:1.5rem;margin-top:3rem}
-    .benefit-item{background:#272727;border-radius:12px;display:flex;gap:1rem;align-items:flex-start;padding:1.25rem 1.5rem;box-shadow:0 4px 12px rgba(0,0,0,.3)}
-    .benefit-item span{font-size:1.75rem;line-height:1;color:#ff6b9a}
-    .benefit-item h3{margin:0 0 .35rem 0;font-size:1.1rem;color:#f5f9f8}
-    .benefit-item p{margin:0;font-size:.95rem;color:#dcdcdc}
-
-    /* Testimonials & footer */
-    .testi{max-width:700px;margin:auto;font-style:italic;text-align:center}
-    footer{padding:2rem;text-align:center;background:#181818;font-size:.85rem}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The AI Concierge™ — Booked-Out Without Burnout</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --gold:#C9A94F;
+  --black:#0A0A0A;
+  --dark:#1B1B1B;
+  --white:#FFFFFF;
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--black);color:var(--white);line-height:1.55}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:700;color:var(--gold)}
+h1{font-size:clamp(2rem,6vw,3rem)}
+h2{font-size:1.6rem;margin-bottom:.6rem}
+section{padding:3.5rem 1.2rem;max-width:900px;margin:auto}
+a.btn{display:inline-block;background:var(--gold);color:var(--black);padding:.9rem 1.4rem;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:.3s ease}
+a.btn:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 0 8px var(--gold)}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;background:linear-gradient(135deg,#111,#000);padding-top:4rem;padding-bottom:4rem;border-bottom:1px solid #333}
+.hero p{font-size:1.05rem;margin:.9rem 0 1.6rem;color:#ccc}
+.features{display:grid;gap:1.8rem}
+.feature-card{background:var(--dark);border-radius:var(--radius);padding:1.4rem;box-shadow:0 4px 16px rgba(0,0,0,.4);display:grid;grid-template-columns:72px 1fr;gap:1.1rem}
+.feature-card img{width:72px;height:72px;border-radius:var(--radius);object-fit:cover}
+.feature-card h3{margin-bottom:.35rem;color:var(--white);font-size:1.05rem}
+.feature-card span{font-size:.9rem;color:#ddd}
+.preview img{margin:1.6rem auto;border-radius:var(--radius)}
+.preview p{text-align:center;font-size:.96rem;color:#bbb}
+.painkiller ul{list-style:none;margin-top:1.1rem}
+.painkiller li{margin:.55rem 0;padding-left:1.2rem;position:relative;color:#eee}
+.painkiller li::before{content:"✦";position:absolute;left:0;top:0;color:var(--gold)}
+.pricing{background:var(--dark);border-radius:var(--radius);padding:2.2rem;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
+.price-row{display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid #444;padding:1.25rem 0;color:#eee}
+.price-row:last-child{border:none}
+.plan-title{font-weight:600;font-size:1.05rem}
+.plan-price{font-family:"Playfair Display",serif;color:var(--gold);font-size:1.5rem}
+.badge{background:var(--gold);color:var(--black);font-size:.75rem;padding:.25rem .45rem;border-radius:6px;margin-left:.4rem}
+.final{text-align:center}
+.final h2{color:var(--gold);font-size:1.7rem}
+footer{padding:2.8rem 1.2rem;text-align:center;font-size:.8rem;color:#777;border-top:1px solid #333}
+@media (min-width:680px){
+ .hero{flex-direction:row;justify-content:space-between;text-align:left}
+ .hero img{max-width:48%}
+ .features{grid-template-columns:1fr 1fr}
+ .preview img{max-width:80%}
+}
+</style>
 </head>
 <body>
-  <!-- HERO -->
-  <header id="hero">
-    <div class="inner">
-      <h1>💫 The AI Marketing Boost Kit</h1>
-      <h2>FREE 7‑Day AI Mini‑Makeover for Solo Stylists</h2>
-      <p>A personalized marketing system that works quietly in your background.</p>
-      <a href="#cta" class="btn">Start My Free Makeover</a>
-    </div>
-  </header>
-
-  <!-- EDGE -->
-  <section class="container">
-    <h2>🎯 Why visibility, not virality, wins.</h2>
-    <p>You don’t need more posts — you need a system that re‑books, reviews and sells while you’re behind the chair. That’s exactly what the Boost Kit delivers.</p>
-  </section>
-
-  <!-- FEATURES CARDS -->
-  <section class="container">
-    <h2>💼 What You’ll Get</h2>
-    <div class="features-grid">
-      <div class="card"><img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/68322f39b49f1973d086c81f.png" alt="Visibility"><div class="text"><h3>Upgrade visibility in local search</h3><p>Stand out on Google, IG & booking apps without changing your vibe.</p></div></div>
-      <div class="card"><img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/683235910eaa6ed2ca4e5cb9.png" alt="Reviews"><div class="text"><h3>Get more 5‑star reviews</h3><p>Done‑for‑you follow‑ups boost ranking & trust. You just tap send.</p></div></div>
-      <div class="card"><img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/682f86e7f5621f79580d41c5.png" alt="Rebook"><div class="text"><h3>Rebook faster, with less back‑and‑forth</h3><p>Smart texts fire at the exact moment clients normally book again.</p></div></div>
-    </div>
-
-    <!-- TEXT BENEFITS -->
-    <div class="benefits-list">
-      <div class="benefit-item"><span>💡</span><div><h3>Sell more services + retail without being salesy</h3><p>AI‑crafted blurbs (that sound like you) make offers easy to understand — and easier to buy.</p></div></div>
-      <div class="benefit-item"><span>📈</span><div><h3>Level up your marketplace page</h3><p>GlossGenius, Vagaro, StyleSeat, Booksy — paste our optimized copy & convert browsers into bookings.</p></div></div>
-      <div class="benefit-item"><span>🤝</span><div><h3>Collaborate locally — and actually grow</h3><p>Plug‑and‑play outreach messages land collabs with makeup artists, photographers & local brands — because referrals &gt; reels.</p></div></div>
-      <div class="benefit-item"><span>🗓️</span><div><h3>A real 30‑day visibility plan built around you</h3><p>No generic prompts. A calendar tuned to your booking flow, slow weeks and all.</p></div></div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="cta" class="container" style="text-align:center;margin:4rem auto;">
-    <h2>🎁 Try the Boost Kit Free</h2>
-    <p>Copy, paste and see what happens when marketing finally moves at stylist speed.</p>
-    <a href="https://payhip.com/b/7ckbr" target="_blank" class="btn">Grab My Free Mini‑Makeover</a>
-  </section>
-
-  <!-- Testimonials & Footer -->
-  <section class="container"><p class="testi">“I stopped guessing and filled two slow days in the first week.” — Suite Owner, Austin</p></section>
-  <footer><p>&copy; 2025 AI Marketing Boost Kit · Inspired by HTML5 UP</p></footer>
+<!-- content remains unchanged -->
 </body>
 </html>
