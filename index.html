@@ -1,56 +1,535 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>The AI Concierge™ — Booked-Out Without Burnout</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+<!-- Header -->
+<header style="position: fixed; top: 0; left: 0; width: 100%; background: rgba(13,13,13,0.9); border-bottom: 1px solid rgba(255,255,255,0.07); z-index: 1000; padding: 1rem 2rem; display: flex; align-items: flex-start; justify-content: space-between;">
+  <a href="#" style="display: flex; align-items: flex-start; gap: 0.5rem;">
+    <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/68365a7d41c55b98d556c879.png" alt="Logo" style="height: 28px; width: auto;" />
+  </a>
+  <nav style="display: flex; gap: 2rem;">
+    <a href="#about" style="color: var(--champagne); font-weight: 500; text-decoration: none; font-size: 1rem;">About</a>
+    <a href="#pricing" style="color: var(--champagne); font-weight: 500; text-decoration: none; font-size: 1rem;">Pricing</a>
+  </nav>
+</header>
+
+<div style="height: 70px;"></div> <!-- Spacer for fixed header -->
+
+<!-- Hero Section -->
+<section class="hero" style="background: radial-gradient(circle at top left, #1e1e1e, #0d0d0d); padding: 7rem 1.5rem 5rem; position: relative; overflow: hidden;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 4rem; position: relative; z-index: 1;">
+    <!-- Text Block -->
+    <div style="flex: 1 1 520px; min-width: 320px; max-width: 540px;">
+      <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--champagne); font-weight: 700; opacity: 0.85;">Exclusive Launch</span>
+      <h1 style="font-size: 3.8rem; font-family: 'Playfair Display', serif; color: #fff; margin: 1.5rem 0; line-height: 1.2; font-weight: 800; animation: fadeInMain 1.4s ease-out; text-shadow: 0 0 12px rgba(231,205,181,0.2);">
+        Booked Solid. Every Month.
+      </h1>
+      <p style="color: #eaeaea; font-size: 1.4rem; line-height: 1.7; margin-bottom: 2rem; animation: fadeInMain 1.8s ease-out;">
+        The AI Concierge™: Monthly Marketing That Fills Your Chair — Not Your Plate
+      </p>
+      <!-- Trust Badges -->
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem; font-size: 1.1rem; color: #dfdfdf; animation: fadeInMain 2.2s ease-out;">
+        <div>💼 Trusted by 1,200+ beauty pros</div>
+        <div>🔓 Cancel anytime. Zero stress.</div>
+        <div>✂️ Designed for salon owners & solo artists</div>
+      </div>
+      <!-- CTA -->
+      <a href="#" class="btn" style="display: inline-block; margin-top: 2rem; font-size: 1.15rem; padding: 1.15rem 2.2rem; background: linear-gradient(to right, #C7A27C, #E5C8A6); color: var(--onyx); border-radius: var(--radius); font-weight: bold; text-decoration: none; box-shadow: 0 10px 25px rgba(199,162,124,0.45); transition: all 0.3s ease; animation: fadeInMain 2.6s ease-out;">
+        Start My Concierge
+      </a>
+    </div>
+    <!-- Visual Block -->
+    <div style="flex: 1 1 520px; min-width: 320px; text-align: center; position: relative;">
+      <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/68365ef569b4d6a0ed900257.png" alt="AI Concierge Hero" style="width: 100%; max-width: 520px; border-radius: var(--radius); box-shadow: 0 20px 60px rgba(0,0,0,0.5); transform: rotate(-0.3deg);" />
+    </div>
+  </div>
+  <style>
+    @keyframes fadeInMain {
+      from {opacity: 0; transform: translateY(25px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .hero .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 50px rgba(199,162,124,0.6);
+    }
+    :root {
+      --champagne: #E5C8A6;
+      --onyx: #1e1e1e;
+      --radius: 8px;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.4rem !important;
+      }
+      p {
+        font-size: 1.15rem !important;
+      }
+      .btn {
+        font-size: 1rem !important;
+        padding: 1rem 1.5rem !important;
+      }
+    }
+  </style>
+</section>
+
+<!-- Decorative asymmetry -->
+<div style="position: absolute; left: -60px; bottom: -60px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(229,200,166,0.05), transparent); border-radius: 50%; z-index: 0;"></div>
+
+<!-- Features Section -->
+<section style="background: #0d0d0d; padding: 6rem 1.5rem;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-direction: column; gap: 4rem;">
+    <div style="position: relative; height: 40px; margin-left: auto; margin-right: 80px; background: linear-gradient(90deg, rgba(229,200,166,0.1), transparent); width: 100px; border-radius: 50%;"></div>
+    <div style="position: absolute; top: -60px; right: -40px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(229,200,166,0.1), transparent); border-radius: 50%; z-index: 0;"></div>
+
+    <!-- Card 1 -->
+    <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; border: 1px solid rgba(229, 200, 166, 0.4); background: linear-gradient(135deg, #151515 0%, #0e0e0e 100%); box-shadow: 0 4px 20px rgba(0,0,0,0.4); border-radius: var(--radius); padding: 2rem;">
+      <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/68367ef1b9242b00f4fb3fc7.png" alt="Caption Calendar" style="width: 100%; max-width: 360px; border-radius: var(--radius); object-fit: contain; box-shadow: 0 0 20px rgba(255,255,255,0.08);" />
+      <div style="flex: 1; color: #f3f3f3; font-size: 1.35rem; line-height: 1.75;">
+        <h2 style="font-size: 2.4rem; margin-bottom: 1rem; color: var(--champagne); text-shadow: 0 0 8px rgba(229,200,166,0.3);">Weekly Caption Calendar</h2>
+        <p style="font-size: 1.2rem; line-height: 1.7;">Plug-and-post, voice-aligned captions<br><br>
+        Based on your actual services, not vague trends<br><br>
+        Paired with scroll-stopping visuals + SEO-smart hashtags<br><br>
+        <strong>Why it works:</strong> Maintains consistency, boosts profile clicks, and reinforces your authority — all without daily effort.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; border: 1px solid rgba(229,200,166,0.4); background: linear-gradient(135deg, #131313, #0c0c0c); box-shadow: 0 3px 16px rgba(0,0,0,0.35); border-radius: var(--radius); padding: 2rem;">
+      <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6835e9ea498b164ccad81dc5.png" alt="Promo Campaigns" style="width: 100%; max-width: 360px; border-radius: var(--radius); object-fit: contain;" />
+      <div style="flex: 1; color: #f3f3f3;">
+        <h2 style="font-size: 2.4rem; margin-bottom: 1rem; color: var(--champagne); text-shadow: 0 0 8px rgba(229,200,166,0.3);">Sell Without Feeling Salesy</h2>
+        <p style="font-size: 1.2rem; line-height: 1.7;">Ready-to-send caption for urgent offers<br><br>
+        SMS version to fill last-minute openings<br><br>
+        Canva flyer script for IG + in-salon promo<br><br>
+        <strong>Why it works:</strong> Limited-time offers drive action fast — filling gaps without cheapening your brand.</p>
+      </div>
+    </div>
+   <!-- Card 3 --> <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; border: 1px solid rgba(229,200,166,0.4); background: linear-gradient(135deg, #131313, #0c0c0c); box-shadow: 0 3px 16px rgba(0,0,0,0.35); border-radius: var(--radius); padding: 2rem;"> <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6835e710498b168542d81a11.png" alt="Collab of the Month" style="width: 100%; max-width: 360px; border-radius: var(--radius); object-fit: contain;" /> <div style="flex: 1; color: #f3f3f3;"> <h2 style="font-size: 2.4rem; margin-bottom: 1rem; color: var(--champagne); text-shadow: 0 0 8px rgba(229,200,166,0.3);">Partner Up, Glow Up</h2> <p style="font-size: 1.2rem; line-height: 1.7;">Every month, you’ll get a fresh collab idea with a done-for-you proposal template, captions, and visuals. Create buzz, build your brand, and grow your local network—without overthinking it.</p> </div> </div> <!-- Card 4 --> <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; border: 1px solid rgba(229,200,166,0.4); background: linear-gradient(135deg, #131313, #0c0c0c); box-shadow: 0 3px 16px rgba(0,0,0,0.35); border-radius: var(--radius); padding: 2rem;"> <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/68361f4b626a5f68bfc7d7a9.png" alt="Google Boost" style="width: 100%; max-width: 360px; border-radius: var(--radius); object-fit: contain;" /> <div style="flex: 1; color: #f3f3f3;"> <h2 style="font-size: 2.4rem; margin-bottom: 1rem; color: var(--champagne); text-shadow: 0 0 8px rgba(229,200,166,0.3);">Be the #1 Salon on Google — Without Buying Ads</h2> <p style="font-size: 1.2rem; line-height: 1.7;">Rank higher, look better, get found more. This kit includes review prompts and Google post ideas that make your salon pop when someone types “best stylist near me.”</p> </div> </div> <!-- Card 5 --> <div style="display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; border: 1px solid rgba(229,200,166,0.4); background: linear-gradient(135deg, #131313, #0c0c0c); box-shadow: 0 3px 16px rgba(0,0,0,0.35); border-radius: var(--radius); padding: 2rem;"> <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/6835e653498b1615ced8193c.png" alt="AI Prompts" style="width: 100%; max-width: 360px; border-radius: var(--radius); object-fit: contain;" /> <div style="flex: 1; color: #f3f3f3;"> <h2 style="font-size: 2.4rem; margin-bottom: 1rem; color: var(--champagne); text-shadow: 0 0 8px rgba(229,200,166,0.3);">Captions That Sound Like You</h2> <p style="font-size: 1.2rem; line-height: 1.7;">Customizable prompts trained to sound like you—so when you use ChatGPT, it actually sounds human. Skip the awkward filler and get captions you’d proudly post.</p> </div> </div>
+<!-- Existing content above remains unchanged -->
+
 <style>
-:root{
-  --gold:#C9A94F;
-  --black:#000000;
-  --dark:#1B1B1B;
-  --white:#FFFFFF;
-  --radius:14px;
+.why-it-works {
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  background: #0d0d0d;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--black);color:var(--white);line-height:1.55}
-h1,h2,h3{font-family:"Playfair Display",serif;font-weight:700;color:var(--gold)}
-h1{font-size:clamp(2rem,6vw,3rem)}
-h2{font-size:1.6rem;margin-bottom:.6rem}
-section{padding:3.5rem 1.2rem;max-width:900px;margin:auto}
-a.btn{display:inline-block;background:var(--gold);color:var(--black);padding:.9rem 1.4rem;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:.3s ease}
-a.btn:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 0 8px var(--gold)}
-.hero{display:flex;flex-direction:column;align-items:center;text-align:center;background:linear-gradient(135deg,#111,#000);padding-top:4rem;padding-bottom:4rem;border-bottom:1px solid #333}
-.hero p{font-size:1.05rem;margin:.9rem 0 1.6rem;color:#ccc}
-.features{display:grid;gap:1.8rem}
-.feature-card{background:var(--dark);border-radius:var(--radius);padding:1.4rem;box-shadow:0 4px 16px rgba(0,0,0,.4);display:grid;grid-template-columns:72px 1fr;gap:1.1rem}
-.feature-card img{width:72px;height:72px;border-radius:var(--radius);object-fit:cover}
-.feature-card h3{margin-bottom:.35rem;color:var(--white);font-size:1.05rem}
-.feature-card span{font-size:.9rem;color:#ddd}
-.preview img{margin:1.6rem auto;border-radius:var(--radius)}
-.preview p{text-align:center;font-size:.96rem;color:#bbb}
-.painkiller ul{list-style:none;margin-top:1.1rem}
-.painkiller li{margin:.55rem 0;padding-left:1.2rem;position:relative;color:#eee}
-.painkiller li::before{content:"✦";position:absolute;left:0;top:0;color:var(--gold)}
-.pricing{background:var(--dark);border-radius:var(--radius);padding:2.2rem;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
-.price-row{display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid #444;padding:1.25rem 0;color:#eee}
-.price-row:last-child{border:none}
-.plan-title{font-weight:600;font-size:1.05rem}
-.plan-price{font-family:"Playfair Display",serif;color:var(--gold);font-size:1.5rem}
-.badge{background:var(--gold);color:var(--black);font-size:.75rem;padding:.25rem .45rem;border-radius:6px;margin-left:.4rem}
-.final{text-align:center}
-.final h2{color:var(--gold);font-size:1.7rem}
-footer{padding:2.8rem 1.2rem;text-align:center;font-size:.8rem;color:#777;border-top:1px solid #333}
-@media (min-width:680px){
- .hero{flex-direction:row;justify-content:space-between;text-align:left}
- .hero img{max-width:48%}
- .features{grid-template-columns:1fr 1fr}
- .preview img{max-width:80%}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: #151515;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.1);
+  color: #f3f3f3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(229,200,166,0.3);
+}
+.icon {
+  font-size: 2.25rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.image-center {
+  margin-top: 3.5rem;
+}
+.image-center img {
+  max-width: 260px;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+.caption {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+  color: #ccc;
 }
 </style>
-</head>
-<body>
-<!-- content remains unchanged -->
-</body>
-</html>
+
+<!-- WHY IT WORKS Section -->
+<section class="why-it-works">
+  <div style="max-width: 1200px; margin: auto;">
+    <h2 style="font-size: 3rem; color: #E5C8A6; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Why It Actually Works</h2>
+    <p style="font-size: 1.2rem; color: #d8d8d8; max-width: 720px; margin: 0 auto 3rem; line-height: 1.7;">
+      Even when you’re burnt out, this system keeps showing up — grounded in psychology, algorithms, and what actually gets booked.
+    </p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="icon">🔁</div>
+        <strong style="display: block; font-size: 1.15rem; margin-bottom: 0.5rem; color: #E5C8A6;">Reels = Reach</strong>
+        <p>Instagram favors video. These scripts boost visibility — even if you hate being on camera.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⏰</div>
+        <strong style="display: block; font-size: 1.15rem; margin-bottom: 0.5rem; color: #E5C8A6;">Promos = Urgency</strong>
+        <p>Time-sensitive offers trigger action. FOMO isn’t just real — it’s revenue.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🧭</div>
+        <strong style="display: block; font-size: 1.15rem; margin-bottom: 0.5rem; color: #E5C8A6;">SEO = Walk-ins</strong>
+        <p>Google-ready prompts help you rank higher — so you get discovered by locals ready to book.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤖</div>
+        <strong style="display: block; font-size: 1.15rem; margin-bottom: 0.5rem; color: #E5C8A6;">Templates = Simplicity</strong>
+        <p>Done-for-you captions that don’t drain your brain — just plug in and post.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🤝</div>
+        <strong style="display: block; font-size: 1.15rem; margin-bottom: 0.5rem; color: #E5C8A6;">Collabs = Trust</strong>
+        <p>Partner scripts let you borrow credibility and grow your audience — no cold DMs required.</p>
+      </div>
+    </div>
+    <div class="image-center">
+      <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/683674ccb09b43af83673c58.jpeg" alt="Subtle background model">
+      <div class="caption">Real stylist. Real results. Real calm.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO UNLOCK Section remains unchanged -->
+<section style="background: linear-gradient(135deg, #fff4ec, #fef1e9); padding: 6rem 1.5rem;">
+  <div style="max-width: 1000px; margin: auto;">
+    <h2 style="text-align: center; font-size: 2.8rem; color: #1e1e1e; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">How to Unlock Your First Kit</h2>
+    <p style="text-align: center; font-size: 1.2rem; color: #4a4a4a; max-width: 680px; margin: 0 auto 3.5rem; line-height: 1.7;">
+      Getting started is ridiculously easy. No tech headaches. No endless forms. Just four steps to scroll-proof content — every single month.
+    </p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 3rem; text-align: center;">
+      <div>
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">🛍️</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #1e1e1e;">Pick Your Tier</h3>
+        <p style="font-size: 1rem; color: #333;">Starter, Glow-Up, or VIP — choose what fits.</p>
+      </div>
+      <div>
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">📝</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #1e1e1e;">Submit Your Brief</h3>
+        <p style="font-size: 1rem; color: #333;">2 minutes. Your services, vibe, and location. That’s it.</p>
+      </div>
+      <div>
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">📥</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #1e1e1e;">Receive Your Kit</h3>
+        <p style="font-size: 1rem; color: #333;">Everything delivered. Ready to post. No Canva stress.</p>
+      </div>
+      <div>
+        <div style="font-size: 2.2rem; margin-bottom: 0.75rem;">📈</div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: #1e1e1e;">Watch Bookings Grow</h3>
+        <p style="font-size: 1rem; color: #333;">Stay consistent, show up online, and finally fill your calendar.</p>
+      </div>
+    </div>
+    <div style="margin-top: 4rem; text-align: center;">
+      <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/683674ccb09b43c3d2673c57.jpeg" alt="Confident Stylist" style="max-width: 200px; border-radius: var(--radius); opacity: 0.4;" />
+    </div>
+  </div>
+</section>
+
+<!-- Updated Unlock Kit Luxe Redesign with Jazzed Up Visuals -->
+
+<style>
+.unlock-kit {
+  background: linear-gradient(to right, #1a0d1a, #0d0d0d);
+  backdrop-filter: blur(12px);
+  padding: 5rem 2rem;
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 40px rgba(0,0,0,0.45), inset 0 0 40px rgba(255,255,255,0.02);
+  overflow: hidden;
+  animation: fadeInUp 1s ease-out;
+  position: relative;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.unlock-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.unlock-content {
+  flex: 1 1 500px;
+  z-index: 2;
+  animation: fadeInLeft 1.2s ease-out;
+  text-align: left;
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.unlock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: inset 0 0 40px rgba(255,255,255,0.03);
+}
+.unlock-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255,255,255,0.03);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  position: relative;
+  border: 1px solid rgba(229,200,166,0.1);
+}
+.unlock-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(229,200,166,0.25);
+}
+.unlock-card h3 {
+  color: #E5C8A6;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 6px rgba(229,200,166,0.15);
+}
+.unlock-card p {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.unlock-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #E5C8A6;
+  text-shadow: 0 0 12px rgba(229,200,166,0.4);
+}
+.unlock-image {
+  flex: 1 1 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  animation: fadeInRight 1.4s ease-out;
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.unlock-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1.2rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  object-fit: cover;
+}
+.unlock-kit::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(229,200,166,0.1), transparent);
+  border-radius: 50%;
+  z-index: 0;
+}
+.unlock-kit::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(229,200,166,0.07), transparent);
+  border-radius: 50%;
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  .unlock-kit h2 {
+    font-size: 2rem;
+  }
+  .unlock-card h3 {
+    font-size: 1.15rem;
+  }
+  .unlock-card p {
+    font-size: 0.95rem;
+  }
+  .unlock-wrapper {
+    flex-direction: column;
+  }
+}
+</style>
+
+<!-- HOW TO UNLOCK Section -->
+<section class="unlock-kit">
+  <div class="unlock-wrapper">
+    <div class="unlock-content">
+      <h2 style="font-size: 2.8rem; color: #E5C8A6; margin-bottom: 2rem; font-family: 'Playfair Display', serif; text-shadow: 0 0 12px rgba(229,200,166,0.25);">
+        How to Unlock Your First Kit
+      </h2>
+      <p style="font-size: 1.2rem; color: #d8d8d8; max-width: 680px; margin: 0 auto 3.5rem; line-height: 1.7;">
+        Getting started is ridiculously easy. No tech headaches. No endless forms. Just four steps to scroll-proof content — every single month.
+      </p>
+      <div class="unlock-grid">
+        <div class="unlock-card">
+          <div class="icon">🛍️</div>
+          <h3>Pick Your Tier</h3>
+          <p>Starter, Glow-Up, or VIP — choose what fits.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="icon">📝</div>
+          <h3>Submit Your Brief</h3>
+          <p>2 minutes. Your services, vibe, and location. That’s it.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="icon">📥</div>
+          <h3>Receive Your Kit</h3>
+          <p>Everything delivered. Ready to post. No Canva stress.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="icon">📈</div>
+          <h3>Watch Bookings Grow</h3>
+          <p>Stay consistent, show up online, and finally fill your calendar.</p>
+        </div>
+      </div>
+    </div>
+    <div class="unlock-image">
+      <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/683674ccb09b43c3d2673c57.jpeg" alt="Confident Stylist">
+    </div>
+  </div>
+</section>
+<!-- WHY IT WORKS - Enhanced Luxe Version with Glow + Shimmer -->
+<style>
+.why-it-works {
+  background: radial-gradient(circle at top right, #1a0d1a, #0d0d0d);
+  padding: 5rem 2rem;
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  animation: fadeInUp 1s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+.why-it-works h2 {
+  font-size: 2.8rem;
+  color: #E5C8A6;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 0 12px rgba(229,200,166,0.5);
+  margin-bottom: 2rem;
+  animation: shimmer 3s infinite;
+  background: linear-gradient(90deg, #E5C8A6, #fff2e1, #E5C8A6);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: inset 0 0 30px rgba(255,255,255,0.02);
+  animation: fadeInUp 1.4s ease-out;
+}
+.why-card {
+  background: rgba(255,255,255,0.02);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(229,200,166,0.25);
+}
+.why-card .icon {
+  font-size: 2.4rem;
+  color: #E5C8A6;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(229,200,166,0.4);
+  animation: pulse 2s infinite;
+}
+.why-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #E5C8A6;
+  margin-bottom: 0.3rem;
+}
+.why-card p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+.why-image {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.why-image img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.45);
+  animation: fadeInUp 2s ease-out;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { text-shadow: 0 0 10px rgba(229,200,166,0.4); }
+  50% { text-shadow: 0 0 20px rgba(229,200,166,0.6); }
+}
+@keyframes shimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+@media (max-width: 768px) {
+  .why-it-works h2 { font-size: 2rem; }
+  .why-card p { font-size: 0.95rem; }
+  .why-card h3 { font-size: 1.15rem; }
+}
+</style>
+
+<section class="why-it-works">
+  <h2>Why It Actually Works (Even When You’re Burnt Out)</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="icon">🔁</div>
+      <h3>Reels = Reach</h3>
+      <p>Instagram favors video. These scripts boost discovery without needing your face.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">⏰</div>
+      <h3>Promos = Urgency</h3>
+      <p>Time-sensitive offers convert faster thanks to FOMO psychology.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🤖</div>
+      <h3>Templates = Simplicity</h3>
+      <p>Reduces decision fatigue, builds consistency, and keeps your voice strong.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🧭</div>
+      <h3>SEO = Walk-ins</h3>
+      <p>Google posts put you on the map — literally. Great for "near me" searches.</p>
+    </div>
+    <div class="why-card">
+      <div class="icon">🤝</div>
+      <h3>Collabs = Trust</h3>
+      <p>Borrowed credibility expands your audience instantly.</p>
+    </div>
+  </div>
+  <div class="why-image">
+    <img src="https://storage.googleapis.com/msgsndr/eCcC4UpNQJXlwmIZiHfw/media/683674ccb09b43af83673c58.jpeg" alt="Why It Works Visual">
+  </div>
+</section>
+
+
+
